@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Search for Kids</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo animate__animated animate__fadeIn">
+                <i class="fas fa-shield-alt logo-icon"></i>
+                <h1>Safe Search for Kids</h1>
+            </div>
+            <div class="nav-links">
+                <a href="signin.html" class="sign-in-btn animate__animated animate__fadeIn">
+                    <i class="fas fa-user"></i> Sign In
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="mascot-container animate__animated animate__bounceIn">
+        <div class="mascot">
+            <object data="images/mascot.svg" type="image/svg+xml" id="mascot-image" class="mascot-svg"></object>
+            <div class="mascot-speech-bubble">
+                <p id="mascot-message">Hi! I'm Owly! Let's search for something fun and safe! 🦉</p>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="search-section">
+            <div class="animate__animated animate__fadeIn animate__delay-1s">
+                <h2><i class="fas fa-globe"></i> Discover the World Safely!</h2>
+                <p class="tagline"><i class="fas fa-star"></i> Learn, explore, and have fun in a safe environment</p>
+            </div>
+            <div class="search-container animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="search-input" placeholder="What would you like to learn about today?">
+                </div>
+                <button id="search-btn">
+                    <i class="fas fa-rocket"></i> Search
+                </button>
+            </div>
+            <div class="search-suggestions" id="search-suggestions"></div>
+        </section>
+
+        <section class="explore-fun">
+            <h2>Explore Fun</h2>
+            <div class="fun-categories">
+                <a href="educational-games.html" class="fun-card">
+                    <div class="fun-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Educational Games</h3>
+                    <p>Learn while playing interactive games</p>
+                    <div class="fun-details">
+                        <span><i class="fas fa-star"></i> Ages 5-12</span>
+                        <span><i class="fas fa-clock"></i> 15-30 mins</span>
+                    </div>
+                </a>
+
+                <a href="arts-and-crafts.html" class="fun-card">
+                    <div class="fun-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Arts & Crafts</h3>
+                    <p>Get creative with fun DIY projects</p>
+                    <div class="fun-details">
+                        <span><i class="fas fa-star"></i> Ages 4-12</span>
+                        <span><i class="fas fa-clock"></i> 20-45 mins</span>
+                    </div>
+                </a>
+
+                <a href="science-experiments.html" class="fun-card">
+                    <div class="fun-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Science Experiments</h3>
+                    <p>Discover amazing scientific wonders</p>
+                    <div class="fun-details">
+                        <span><i class="fas fa-star"></i> Ages 6-12</span>
+                        <span><i class="fas fa-clock"></i> 30-60 mins</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="categories">
+            <h2 class="animate__animated animate__fadeIn">
+                <i class="fas fa-compass"></i> Explore Fun Categories
+            </h2>
+            <div class="category-grid">
+                <div class="category-card animate__animated animate__fadeInUp animate__delay-1s" data-category="science">
+                    <i class="fas fa-flask category-icon"></i>
+                    <h3>Science</h3>
+                    <p><i class="fas fa-lightbulb"></i> Discover amazing experiments and facts!</p>
+                </div>
+                <div class="category-card animate__animated animate__fadeInUp animate__delay-2s" data-category="animals">
+                    <i class="fas fa-paw category-icon"></i>
+                    <h3>Animals</h3>
+                    <p><i class="fas fa-heart"></i> Learn about wonderful creatures!</p>
+                </div>
+                <div class="category-card animate__animated animate__fadeInUp animate__delay-3s" data-category="history">
+                    <i class="fas fa-landmark category-icon"></i>
+                    <h3>History</h3>
+                    <p><i class="fas fa-clock"></i> Travel back in time!</p>
+                </div>
+                <div class="category-card animate__animated animate__fadeInUp animate__delay-4s" data-category="math">
+                    <i class="fas fa-calculator category-icon"></i>
+                    <h3>Math</h3>
+                    <p><i class="fas fa-equals"></i> Make numbers fun!</p>
+                </div>
+                <div class="category-card animate__animated animate__fadeInUp animate__delay-4s" data-category="art">
+                    <i class="fas fa-palette category-icon"></i>
+                    <h3>Art</h3>
+                    <p><i class="fas fa-paint-brush"></i> Express your creativity!</p>
+                </div>
+                <div class="category-card animate__animated animate__fadeInUp animate__delay-4s" data-category="space">
+                    <i class="fas fa-space-shuttle category-icon"></i>
+                    <h3>Space</h3>
+                    <p><i class="fas fa-star"></i> Explore the universe!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-choose-us">
+            <div class="section-header">
+                <h2>Why Choose SafeSearch for Kids? 🌟</h2>
+                <p>A safe and fun learning adventure for every child!</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3>Safe & Fun Adventures! 🎮</h3>
+                    <p>Like a magical shield, we keep the internet fun and safe for you! Only the best content makes it through our special filter.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Learn While Playing! 📚</h3>
+                    <p>Who says learning can't be super fun? Discover amazing facts, play cool games, and become smarter every day!</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Creative Zone! 🎨</h3>
+                    <p>Let your imagination run wild! Draw, craft, and create amazing things with endless possibilities!</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Your Own Space! ⭐</h3>
+                    <p>Everything is made just for you! Bright colors, fun buttons, and easy navigation make exploring a breeze.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Track Your Progress! 🏆</h3>
+                    <p>Watch yourself grow smarter every day! Earn badges, complete challenges, and become a learning champion.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Friends & Family! 👨‍👩‍👧‍👦</h3>
+                    <p>Your parents can join in on the fun too! They can see all the amazing things you're learning!</p>
+                </div>
+            </div>
+
+            <div class="join-adventure">
+                <div class="adventure-content">
+                    <h3>Ready for an Amazing Adventure? 🚀</h3>
+                    <p>Start exploring the wonderful world of safe, fun learning!</p>
+                    <a href="#" class="start-adventure-btn">
+                        <i class="fas fa-rocket"></i>
+                        Let's Go!
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-content">
+            <h2><i class="fas fa-lightbulb"></i> Today's Fun Facts</h2>
+            <div class="fun-fact-container" id="fun-fact">
+                <!-- Fun facts will be dynamically added here -->
+            </div>
+        </section>
+
+        <section class="search-results" id="search-results">
+            <!-- Search results will be dynamically populated here -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-sections">
+                <div class="footer-section">
+                    <h3><i class="fas fa-shield-alt"></i> Safe Search</h3>
+                    <p>Empowering children to explore the internet safely and learn with confidence. Our mission is to provide a secure and educational online experience.</p>
+                    <div class="footer-newsletter">
+                        <h3>Stay Updated</h3>
+                        <form id="newsletter-form">
+                            <input type="email" placeholder="Enter your email">
+                            <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3><i class="fas fa-link"></i> Quick Links</h3>
+                    <div class="quick-links">
+                        <a href="privacy-policy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                        <a href="parent-controls.html"><i class="fas fa-user-shield"></i> Parent Controls</a>
+                        <a href="about.html"><i class="fas fa-book"></i> About Us</a>
+                        <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                        <a href="help.html"><i class="fas fa-question-circle"></i> Help</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3><i class="fas fa-headset"></i> Support</h3>
+                    <div class="quick-links">
+                        <a href="help.html#faq"><i class="fas fa-question"></i> FAQ</a>
+                        <a href="help.html#getting-started"><i class="fas fa-rocket"></i> Getting Started</a>
+                        <a href="help.html#safety-features"><i class="fas fa-shield-alt"></i> Safety Features</a>
+                        <a href="help.html#troubleshooting"><i class="fas fa-wrench"></i> Troubleshooting</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-social">
+                <a href="#" class="social-icon" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Safe Search for Kids. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/page-interactions.js"></script>
+    <script src="js/mascot.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Shield base -->
+    <path d="M24 4L8 10V22C8 32.4 14.6 42 24 46C33.4 42 40 32.4 40 22V10L24 4Z" fill="#4CAF50"/>
+    <!-- Shield highlight -->
+    <path d="M24 4L8 10V22C8 23.7 8.2 25.4 8.5 27L24 42.5L39.5 27C39.8 25.4 40 23.7 40 22V10L24 4Z" fill="#81C784"/>
+    <!-- Happy face -->
+    <circle cx="17" cy="20" r="3" fill="white"/> <!-- Left eye -->
+    <circle cx="31" cy="20" r="3" fill="white"/> <!-- Right eye -->
+    <path d="M16 28C16 28 20 32 24 32C28 32 32 28 32 28" stroke="white" stroke-width="3" stroke-linecap="round"/> <!-- Smile -->
+</svg>

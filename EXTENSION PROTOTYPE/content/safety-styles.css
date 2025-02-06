@@ -1,0 +1,66 @@
+/* Safety overlay styles */
+.safety-blur {
+    filter: blur(30px) grayscale(1) !important;
+    transition: filter 0.3s !important;
+}
+
+.safety-warning {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    background: rgba(255, 107, 107, 0.9) !important;
+    color: white !important;
+    padding: 20px !important;
+    border-radius: 10px !important;
+    text-align: center !important;
+    font-family: 'Comic Sans MS', cursive !important;
+    z-index: 999999 !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+.safety-container {
+    position: relative !important;
+    display: inline-block !important;
+}
+
+/* Custom styles for different content types */
+.safety-text-blur {
+    color: transparent !important;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5) !important;
+}
+
+.safety-image-blur {
+    opacity: 0.7 !important;
+}
+
+.safety-video-blur {
+    pointer-events: none !important;
+}
+
+/* Warning icons and messages */
+.safety-icon {
+    font-size: 24px !important;
+    margin-bottom: 10px !important;
+}
+
+.safety-message {
+    font-size: 16px !important;
+    margin-bottom: 10px !important;
+}
+
+.safety-reason {
+    font-size: 14px !important;
+    color: #FFE0E0 !important;
+}
+
+/* Animation for warnings */
+@keyframes warningPulse {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.05); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+.safety-warning {
+    animation: warningPulse 2s infinite;
+}

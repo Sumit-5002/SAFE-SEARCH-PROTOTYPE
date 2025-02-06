@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Controls - Safe Search for Kids</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-shield-alt"></i>
+                    Safe Search
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="parent-dashboard.html"><i class="fas fa-user-shield"></i> Parent Dashboard</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content-page">
+        <div class="page-container">
+            <div id="controls-content" style="display: none;">
+                <h1><i class="fas fa-shield-alt"></i> Parent Controls</h1>
+                
+                <section class="control-section">
+                    <h2><i class="fas fa-filter"></i> Content Filtering</h2>
+                    <div class="control-card">
+                        <div class="control-toggle">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <div>
+                                <h3>Safe Search</h3>
+                                <p>Filter out inappropriate content and ensure child-safe search results</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-card">
+                        <div class="control-toggle">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <div>
+                                <h3>Age-Appropriate Content</h3>
+                                <p>Customize content based on your child's age group</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="control-section">
+                    <h2><i class="fas fa-clock"></i> Time Management</h2>
+                    <div class="control-card">
+                        <div class="control-toggle">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                            <div>
+                                <h3>Screen Time Limits</h3>
+                                <p>Set daily usage limits and schedule breaks</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-card">
+                        <div class="control-toggle">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                            <div>
+                                <h3>Bedtime Mode</h3>
+                                <p>Automatically disable access during specified sleeping hours</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="control-section">
+                    <h2><i class="fas fa-history"></i> Activity Monitoring</h2>
+                    <div class="control-card">
+                        <div class="control-toggle">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                            <div>
+                                <h3>Search History</h3>
+                                <p>Monitor and review your child's search activities</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-card">
+                        <div class="control-toggle">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                            <div>
+                                <h3>Weekly Reports</h3>
+                                <p>Receive detailed reports of online activities and time spent</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="control-section">
+                    <h2><i class="fas fa-lock"></i> Access Control</h2>
+                    <div class="control-card">
+                        <div class="control-toggle">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <div>
+                                <h3>Website Blocking</h3>
+                                <p>Block access to specific websites or categories</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-card">
+                        <div class="control-toggle">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <div>
+                                <h3>Safe Mode Lock</h3>
+                                <p>Prevent changes to safety settings without parent permission</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div id="login-form" style="display: none;">
+                <h1>Login</h1>
+                <form>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username"><br><br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password"><br><br>
+                    <input type="submit" value="Login">
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="privacy-policy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="parent-controls.html" class="active"><i class="fas fa-user-shield"></i> Parent Controls</a>
+                <a href="about.html"><i class="fas fa-book"></i> About Us</a>
+                <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="help.html"><i class="fas fa-question-circle"></i> Help</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Safe Search for Kids. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Check if user is logged in
+        function checkAuth() {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+            const controlsContent = document.getElementById('controls-content');
+            const loginForm = document.getElementById('login-form');
+            
+            if (isLoggedIn === 'true') {
+                controlsContent.style.display = 'block';
+                loginForm.style.display = 'none';
+            } else {
+                controlsContent.style.display = 'none';
+                loginForm.style.display = 'block';
+                window.location.href = 'login.html';
+            }
+        }
+
+        // Run auth check when page loads
+        window.onload = checkAuth;
+    </script>
+
+    <script src="js/main.js"></script>
+    <script src="js/page-interactions.js"></script>
+</body>
+</html>

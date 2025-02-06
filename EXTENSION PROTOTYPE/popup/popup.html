@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SafeSearch Kids</title>
+    <link rel="stylesheet" href="popup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-section">
+                <img src="../assets/shield-happy.svg" alt="Happy Shield" class="logo">
+                <h1>SafeSearch Kids</h1>
+            </div>
+            <div class="main-toggle">
+                <label class="switch">
+                    <input type="checkbox" id="protectionToggle" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </header>
+
+        <div class="status-card">
+            <div class="shield-status">
+                <div class="shield-icon active" id="shieldIcon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="status-info">
+                    <p class="status-text">Protection is <span id="protectionStatus">ON</span></p>
+                    <p class="status-desc">Keeping you safe from harmful content</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="website-button-container">
+            <button id="openWebsiteBtn" class="btn-primary">
+                <i class="fas fa-globe"></i> Open SafeSearch Website
+            </button>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="feature-text">
+                    <h3>Safe Search</h3>
+                    <label class="switch small">
+                        <input type="checkbox" id="safeSearchToggle" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-eye-slash"></i>
+                </div>
+                <div class="feature-text">
+                    <h3>Content Blur</h3>
+                    <label class="switch small">
+                        <input type="checkbox" id="blurToggle" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="feature-text">
+                    <h3>AI Filter</h3>
+                    <label class="switch small">
+                        <input type="checkbox" id="aiToggle" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="feature-text">
+                    <h3>Time Limit</h3>
+                    <select id="timeLimit" class="time-select">
+                        <option value="3600">1 Hour</option>
+                        <option value="7200" selected>2 Hours</option>
+                        <option value="10800">3 Hours</option>
+                        <option value="14400">4 Hours</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-section">
+            <h2>Today's Protection</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-number" id="blockedCount">0</span>
+                        <span class="stat-label">Threats Blocked</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-number" id="safeCount">0</span>
+                        <span class="stat-label">Safe Sites</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-number" id="timeSpent">0h</span>
+                        <span class="stat-label">Screen Time</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mascot-section">
+            <div class="mascot-container">
+                <img src="../assets/mascot-happy.svg" alt="Happy Mascot" id="mascot" class="mascot">
+                <div class="speech-bubble">
+                    <p id="mascotMessage">Hi friend! I'm keeping you safe while you explore! 🌟</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chatbot-section">
+            <div class="chat-header">
+                <i class="fas fa-robot"></i>
+                <h3>SafeSearch Helper</h3>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <!-- Messages will be added here -->
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chatInput" placeholder="Ask me anything!" maxlength="100">
+                <button id="sendMessage">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+
+        <footer>
+            <button id="reportButton" class="report-button">
+                <i class="fas fa-flag"></i>
+                Report a Problem
+            </button>
+            <div class="footer-links">
+                <a href="#" id="helpLink">Help</a>
+                <a href="#" id="settingsLink">Settings</a>
+                <a href="#" id="parentalLink">Parent Controls</a>
+            </div>
+        </footer>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

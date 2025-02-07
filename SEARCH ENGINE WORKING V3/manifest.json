@@ -1,0 +1,63 @@
+{
+  "manifest_version": 3,
+  "name": "SafeSearch Kids",
+  "version": "1.0",
+  "description": "A safe browsing extension for kids with content filtering and time management",
+  "permissions": [
+    "storage",
+    "tabs",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/content-script.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "pages/*",
+        "assets/*",
+        "website/*",
+        "website/Safe-search-for-kids-/*",
+        "website/Safe-search-for-kids-/ai search/*",
+        "website/Safe-search-for-kids-/ai search/js/*",
+        "website/Safe-search-for-kids-/ai search/css/*",
+        "website/Safe-search-for-kids-/ai search/images/*"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "assets/icon16.png",
+      "48": "assets/icon48.png",
+      "128": "assets/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  }
+}

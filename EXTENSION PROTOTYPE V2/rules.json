@@ -1,0 +1,244 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/pages/blocked.html"
+      }
+    },
+    "condition": {
+      "regexFilter": ".*(porn|xxx|adult|sex|nude|naked|erotic|sensual|lust|seduction|arousal|foreplay|intimacy|passion|orgasm|climax|naughty|kinky|fetish|bdsm).*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/pages/blocked.html"
+      }
+    },
+    "condition": {
+      "regexFilter": ".*(dominant|submissive|bondage|roleplay|fantasy|voyeur|masturbation|aphrodisiac|sexting|pornography|nsfw|hardcore|softcore|webcam|striptease|escort|brothel).*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/pages/blocked.html"
+      }
+    },
+    "condition": {
+      "regexFilter": ".*(massage\\s*parlor|adult\\s*film|adult\\s*star|onlyfans|camgirl|sugar\\s*daddy|sugar\\s*baby|swingers|polyamory|strip\\s*club|burlesque|risque).*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/pages/blocked.html"
+      }
+    },
+    "condition": {
+      "regexFilter": ".*(item\\s*girl|desi\\s*romance|masala\\s*movie|tharak|kamukta|rati\\s*kriya|jism|choli\\s*ke\\s*peeche|masti|aashiq|raat\\s*ki\\s*rani).*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 5,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/pages/blocked.html"
+      }
+    },
+    "condition": {
+      "regexFilter": ".*(intercourse|making\\s*love|casual\\s*sex|one\\s*night\\s*stand|friends\\s*with\\s*benefits|hookup|kissing|oral|handcuffs|blindfold|whip|paddle).*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 6,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/pages/blocked.html"
+      }
+    },
+    "condition": {
+      "regexFilter": ".*(alcohol|cigarettes|vaping|marijuana|gambling|casino|betting|lottery|liquor|cocktail|nightclub|rave|hangover|drunk|wild\\s*party|vip\\s*lounge|strip\\s*bar).*",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 7,
+    "priority": 1,
+    "action": { 
+      "type": "block"
+    },
+    "condition": {
+      "regexFilter": ".*\\b(porn|xxx|adult|sex|nude|naked|escort)\\b.*",
+      "resourceTypes": ["main_frame", "sub_frame"]
+    }
+  },
+  {
+    "id": 8,
+    "priority": 1,
+    "action": { 
+      "type": "block"
+    },
+    "condition": {
+      "regexFilter": ".*(\\.(xxx|sex|adult|porn)|sex\\-|porn\\-|adult\\-).*",
+      "resourceTypes": ["main_frame", "sub_frame"]
+    }
+  },
+  {
+    "id": 9,
+    "priority": 1,
+    "action": { 
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||xvideos*",
+      "resourceTypes": ["main_frame", "sub_frame"]
+    }
+  },
+  {
+    "id": 10,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "addOrReplaceParams": [
+              { "key": "safe", "value": "strict" },
+              { "key": "safesearch", "value": "strict" }
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "||google.*/search",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 11,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "addOrReplaceParams": [
+              { "key": "safe_search", "value": "strict" }
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "||bing.*/search",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 12,
+    "priority": 1,
+    "action": { 
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*gambling*",
+      "resourceTypes": ["main_frame", "sub_frame"]
+    }
+  },
+  {
+    "id": 13,
+    "priority": 1,
+    "action": { 
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*betting*",
+      "resourceTypes": ["main_frame", "sub_frame"]
+    }
+  },
+  {
+    "id": 14,
+    "priority": 1,
+    "action": { 
+      "type": "block"
+    },
+    "condition": {
+      "regexFilter": ".*(violence|gore|death|torture).*",
+      "resourceTypes": ["main_frame", "sub_frame"]
+    }
+  },
+  {
+    "id": 15,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "addOrReplaceParams": [
+              { "key": "safe", "value": "1" }
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "||yahoo.*/search",
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 16,
+    "priority": 1,
+    "action": { 
+      "type": "block"
+    },
+    "condition": {
+      "regexFilter": ".*(drugs|cocaine|heroin|marijuana).*",
+      "resourceTypes": ["main_frame", "sub_frame"]
+    }
+  },
+  {
+    "id": 17,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "addOrReplaceParams": [
+              { "key": "safe_mode", "value": "true" }
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "||duckduckgo.*/",
+      "resourceTypes": ["main_frame"]
+    }
+  }
+]

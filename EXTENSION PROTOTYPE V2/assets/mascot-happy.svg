@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Body -->
+    <circle cx="120" cy="120" r="100" fill="#8B4513"/>
+    <circle cx="120" cy="120" r="85" fill="#DEB887"/>
+    
+    <!-- Eyes -->
+    <g class="eyes">
+        <!-- Left Eye -->
+        <circle cx="85" cy="100" r="25" fill="white"/>
+        <circle cx="85" cy="100" r="20" fill="#FFD700"/>
+        <circle cx="85" cy="100" r="10" fill="black"/>
+        <circle cx="80" cy="95" r="5" fill="white"/>
+        
+        <!-- Right Eye -->
+        <circle cx="155" cy="100" r="25" fill="white"/>
+        <circle cx="155" cy="100" r="20" fill="#FFD700"/>
+        <circle cx="155" cy="100" r="10" fill="black"/>
+        <circle cx="150" cy="95" r="5" fill="white"/>
+    </g>
+    
+    <!-- Beak -->
+    <path d="M110 120 L130 120 L120 135 Z" fill="#FFA500"/>
+    
+    <!-- Eyebrows -->
+    <path d="M60 85 Q85 75 110 85" stroke="#8B4513" stroke-width="5" fill="none"/>
+    <path d="M130 85 Q155 75 180 85" stroke="#8B4513" stroke-width="5" fill="none"/>
+    
+    <!-- Wings -->
+    <path d="M50 120 Q70 150 50 180" stroke="#8B4513" stroke-width="8" fill="none"/>
+    <path d="M190 120 Q170 150 190 180" stroke="#8B4513" stroke-width="8" fill="none"/>
+    
+    <!-- Feet -->
+    <path d="M100 200 L110 185 L120 200" stroke="#FFA500" stroke-width="5" fill="none"/>
+    <path d="M120 200 L130 185 L140 200" stroke="#FFA500" stroke-width="5" fill="none"/>
+    
+    <!-- Chest Pattern -->
+    <ellipse cx="120" cy="150" rx="30" ry="25" fill="#FFFFFF" opacity="0.6"/>
+    
+    <!-- Animated Blinking -->
+    <style>
+        @keyframes blink {
+            0%, 48%, 52%, 100% { transform: scaleY(1); }
+            50% { transform: scaleY(0.1); }
+        }
+        .eyes {
+            animation: blink 4s infinite;
+            transform-origin: center;
+        }
+    </style>
+</svg>

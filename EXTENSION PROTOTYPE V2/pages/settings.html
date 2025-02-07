@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - SafeSearch Kids</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f5f7fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .settings-section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #3498db;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #f1f3f5;
+        }
+
+        .setting-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .setting-info {
+            flex: 1;
+        }
+
+        .setting-info h3 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .setting-info i {
+            color: #3498db;
+        }
+
+        .setting-info p {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        /* Switch styles */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #2ecc71;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        /* Select styles */
+        select {
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            background: white;
+            color: #2c3e50;
+            font-family: 'Nunito', sans-serif;
+            cursor: pointer;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .save-button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .save-button:hover {
+            background: #2980b9;
+        }
+
+        .save-message {
+            text-align: center;
+            margin-top: 10px;
+            color: #2ecc71;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-section">
+                <img src="../assets/shield-happy.svg" alt="Happy Shield" class="logo">
+                <h1>SafeSearch Kids - Settings</h1>
+            </div>
+            <p>Customize your safe browsing experience!</p>
+        </header>
+
+        <div class="settings-section">
+            <h2>Protection Settings</h2>
+            <div class="setting-item">
+                <div class="setting-info">
+                    <h3><i class="fas fa-shield-alt"></i> Safe Search</h3>
+                    <p>Filter search results to show only kid-friendly content</p>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="safeSearchToggle" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="setting-item">
+                <div class="setting-info">
+                    <h3><i class="fas fa-eye-slash"></i> Content Blur</h3>
+                    <p>Blur potentially unsafe images until reviewed</p>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="blurToggle" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="setting-item">
+                <div class="setting-info">
+                    <h3><i class="fas fa-robot"></i> AI Filter</h3>
+                    <p>Use smart AI to detect unsafe content</p>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="aiToggle" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="settings-section">
+            <h2>Time Settings</h2>
+            <div class="setting-item">
+                <div class="setting-info">
+                    <h3><i class="fas fa-clock"></i> Daily Time Limit</h3>
+                    <p>Set maximum screen time per day</p>
+                </div>
+                <select id="timeLimit">
+                    <option value="3600">1 Hour</option>
+                    <option value="7200" selected>2 Hours</option>
+                    <option value="10800">3 Hours</option>
+                    <option value="14400">4 Hours</option>
+                </select>
+            </div>
+
+            <div class="setting-item">
+                <div class="setting-info">
+                    <h3><i class="fas fa-bell"></i> Break Reminders</h3>
+                    <p>Get reminded to take screen breaks</p>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="breakReminders" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <button id="saveSettings" class="save-button">
+            <i class="fas fa-save"></i> Save Settings
+        </button>
+        <p id="saveMessage" class="save-message">Settings saved successfully!</p>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+</html>

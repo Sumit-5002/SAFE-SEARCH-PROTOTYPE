@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Controls - SafeSearch Kids</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f5f7fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .login-section {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .login-section h2 {
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+            text-align: left;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .login-button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .login-button:hover {
+            background: #2980b9;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .controls-section {
+            display: none;
+        }
+
+        .control-group {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #3498db;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #f1f3f5;
+        }
+
+        .control-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .control-info {
+            flex: 1;
+        }
+
+        .control-info h3 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .control-info i {
+            color: #3498db;
+        }
+
+        .control-info p {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #2ecc71;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .save-button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .save-button:hover {
+            background: #2980b9;
+        }
+
+        .save-message {
+            text-align: center;
+            margin-top: 10px;
+            color: #2ecc71;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-section">
+                <img src="../assets/shield-happy.svg" alt="Happy Shield" class="logo">
+                <h1>SafeSearch Kids - Parent Controls</h1>
+            </div>
+            <p>Manage your child's online safety settings</p>
+        </header>
+
+        <div class="login-section" id="loginSection">
+            <h2><i class="fas fa-lock"></i> Parent Access</h2>
+            <div class="input-group">
+                <label for="password">Parent Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+            <button class="login-button" id="loginButton">
+                <i class="fas fa-sign-in-alt"></i> Access Controls
+            </button>
+            <p class="error-message" id="errorMessage">Incorrect password. Please try again.</p>
+        </div>
+
+        <div class="controls-section" id="controlsSection">
+            <div class="control-group">
+                <h2>Access Controls</h2>
+                <div class="control-item">
+                    <div class="control-info">
+                        <h3><i class="fas fa-lock"></i> Lock Settings</h3>
+                        <p>Prevent changes to safety settings without password</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="lockSettings" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="control-item">
+                    <div class="control-info">
+                        <h3><i class="fas fa-shield-alt"></i> Force Safe Mode</h3>
+                        <p>Always keep safe search and content filtering on</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="forceSafeMode" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <h2>Time Management</h2>
+                <div class="control-item">
+                    <div class="control-info">
+                        <h3><i class="fas fa-calendar-alt"></i> Set Schedule</h3>
+                        <p>Define allowed browsing hours</p>
+                    </div>
+                    <select id="schedule">
+                        <option value="always">Always Allow</option>
+                        <option value="school">School Hours</option>
+                        <option value="custom">Custom Schedule</option>
+                    </select>
+                </div>
+
+                <div class="control-item">
+                    <div class="control-info">
+                        <h3><i class="fas fa-hourglass-half"></i> Override Time Limit</h3>
+                        <p>Allow extra time with password</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="allowOverride">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <h2>Content Controls</h2>
+                <div class="control-item">
+                    <div class="control-info">
+                        <h3><i class="fas fa-list"></i> Allowed Sites</h3>
+                        <p>Manage list of approved websites</p>
+                    </div>
+                    <button class="login-button" style="width: auto; padding: 8px 15px;">
+                        <i class="fas fa-edit"></i> Edit List
+                    </button>
+                </div>
+
+                <div class="control-item">
+                    <div class="control-info">
+                        <h3><i class="fas fa-filter"></i> Filter Level</h3>
+                        <p>Set content filtering strictness</p>
+                    </div>
+                    <select id="filterLevel">
+                        <option value="strict">Strict</option>
+                        <option value="moderate">Moderate</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="saveControls" class="save-button">
+                <i class="fas fa-save"></i> Save Controls
+            </button>
+            <p id="saveMessage" class="save-message">Controls saved successfully!</p>
+        </div>
+    </div>
+
+    <script src="parent-controls.js"></script>
+</body>
+</html>

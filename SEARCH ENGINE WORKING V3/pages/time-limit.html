@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Time's Up! - SafeSearch Kids</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Comic Neue', cursive;
+            background-color: #F0F7FF;
+            color: #333;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 30px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #4CAF50;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .mascot {
+            width: 150px;
+            height: 150px;
+            margin: 20px auto;
+        }
+
+        .message {
+            font-size: 20px;
+            line-height: 1.5;
+            margin: 20px 0;
+        }
+
+        .suggestion {
+            background: #E8F5E9;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .suggestion h2 {
+            color: #2196F3;
+            margin-bottom: 15px;
+        }
+
+        .activities {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .activity {
+            background: #F5F5F5;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+
+        .emoji {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .mascot {
+            animation: bounce 2s infinite;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Time for a Break! 🌟</h1>
+        
+        <img src="../assets/mascot-happy.svg" alt="Happy Mascot" class="mascot">
+        
+        <div class="message">
+            Great job using the computer today! Now it's time for other fun activities!
+        </div>
+
+        <div class="suggestion">
+            <h2>Here are some fun things you can do! 🎨</h2>
+            <div class="activities">
+                <div class="activity">
+                    <div class="emoji">🎨</div>
+                    Draw a picture
+                </div>
+                <div class="activity">
+                    <div class="emoji">📚</div>
+                    Read a book
+                </div>
+                <div class="activity">
+                    <div class="emoji">⚽</div>
+                    Play outside
+                </div>
+                <div class="activity">
+                    <div class="emoji">🎮</div>
+                    Take a walk
+                </div>
+            </div>
+        </div>
+
+        <div class="message">
+            Remember: Taking breaks is good for your eyes and helps you stay healthy! 💪
+        </div>
+    </div>
+</body>
+</html>

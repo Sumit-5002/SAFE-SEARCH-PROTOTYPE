@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeSearch Kids - Parental Controls</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/parent-controls.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-section">
+                <img src="../assets/shield-happy.svg" alt="Happy Shield" class="logo">
+                <h1>Parental Controls</h1>
+            </div>
+        </header>
+
+        <main>
+            <section class="parent-controls-section">
+                <form id="parent-controls-form">
+                    <div class="control-group">
+                        <h2>Content Filtering</h2>
+                        <div class="toggle-container">
+                            <label for="content-filter">Enable Content Filter</label>
+                            <input type="checkbox" id="content-filter" name="content-filter">
+                        </div>
+                        
+                        <div class="blocked-websites">
+                            <label for="blocked-websites">Blocked Websites</label>
+                            <textarea id="blocked-websites" rows="5" placeholder="Enter websites to block (one per line)"></textarea>
+                            <button type="button" id="add-website">Add Website</button>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <h2>Time Management</h2>
+                        <div class="toggle-container">
+                            <label for="time-management">Enable Time Management</label>
+                            <input type="checkbox" id="time-management" name="time-management">
+                        </div>
+                        
+                        <div class="time-limit">
+                            <label for="time-limit">Daily Screen Time Limit (minutes)</label>
+                            <input type="number" id="time-limit" name="time-limit" min="0" max="1440">
+                        </div>
+                    </div>
+
+                    <div class="control-actions">
+                        <button type="submit" class="save-btn">Save Settings</button>
+                        <button type="reset" class="reset-btn">Reset to Default</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="info-section">
+                <h2>About Parental Controls</h2>
+                <p>Our parental controls help you create a safe and balanced online experience for your children. Customize content filtering and manage screen time to ensure a healthy digital environment.</p>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="parent-dashboard.html">Parent Dashboard</a>
+                <a href="help.html">Help</a>
+            </div>
+            <p>&copy; 2025 SafeSearch Kids. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="js/parent-controls.js"></script>
+</body>
+</html>
